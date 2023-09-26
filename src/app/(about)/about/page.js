@@ -4,6 +4,9 @@ import Link from "next/link";
 
 export const metadata = {
   title: "About Me",
+  alternates: {
+    canonical: "/about",
+  },
   description: `Here are some details about my self.`,
 };
 
