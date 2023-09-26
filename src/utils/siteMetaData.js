@@ -1,6 +1,6 @@
 // please update required information
 const siteMetadata = {
-  title: "Durgesh Gupta",
+  title: "Freelance full-stack developer from Mumbai, India",
   author: "Durgesh Gupta",
   headerTitle: "Freelance Web Developer from Mumbai, India",
   description:
