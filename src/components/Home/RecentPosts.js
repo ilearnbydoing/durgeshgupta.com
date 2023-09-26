@@ -12,7 +12,7 @@ const RecentPosts = ({ blogs }) => {
           Recent Posts
         </h2>
         <Link
-          href="/categories/all"
+          href="/tags/all"
           className="inline-block font-medium text-accent dark:text-accentDark underline underline-offset-2      text-base md:text-lg"
         >
           view all

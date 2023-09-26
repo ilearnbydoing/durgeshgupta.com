@@ -11,7 +11,7 @@ const BlogDetails = ({ blog, slug: blogSlug }) => {
         {format(parseISO(blog.publishedAt), "LLLL d, yyyy")}
       </time>
       <div className="m-3">{blog.readingTime.text}</div>
-      <Link href={`/categories/${slug(blog.tags[0])}`} className="m-3">
+      <Link href={`/tags/${slug(blog.tags[0])}`} className="m-3">
         #{blog.tags[0]}
       </Link>
     </div>
