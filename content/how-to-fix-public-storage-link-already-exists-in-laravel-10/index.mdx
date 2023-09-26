@@ -1,0 +1,65 @@
+---
+title: "How to fix public storage link already exists in Laravel 10?"
+description: "how to resolve the 'storage already linked' issue in Laravel by deleting and recreating symbolic links or checking permissions. Get your storage back on track."
+publishedAt: "2023-09-14"
+updatedAt: "2023-09-14"
+author: "Durgesh Gupta"
+isPublished: true
+tags:
+  - laravel
+image: "../../public/blogs/freelance-laravel-web-developer-in-mumbai.png"
+---
+
+In Laravel 10 when you run
+
+```
+php artisan storage:link
+```
+
+if you encounter an issue where your storage directory is already linked and exist, it usually means that the symbolic link from the storage directory to the **public/storage directory already exists**. Laravel typically creates this symbolic link during the installation process to allow easy access to uploaded files.
+
+## How to fix The [public/storage] link already exists?
+
+**To resolve this issue, you have a few options:**
+
+**Delete the Existing Symbolic Link:**
+
+You can manually delete the existing symbolic link and then recreate it using the **php artisan storage:link** command. Here are the steps:
+
+Open your terminal or command prompt.
+
+Navigate to the root directory of your Laravel project.
+
+Delete the existing symbolic link by running:
+
+```
+rm public/storage
+```
+
+**Recreate the symbolic link by running:**
+
+```
+php artisan storage:link
+```
+
+This command will create a new symbolic link from the public/storage directory to the storage/app/public directory.
+
+**Check for Permission Issues:**
+If you are still facing issues, it might be related to file permissions. Ensure that the directories and files in the storage and public/storage directories have appropriate read and write permissions for the web server user (usually www-data or nginx). You can use the chmod command to adjust permissions if necessary.
+
+**Manually Create the Symbolic Link:**
+If the php artisan storage:link command does not work for some reason, you can manually create the symbolic link using the ln command:
+
+Open your terminal.
+
+Navigate to your project's root directory.
+
+**Run the following command:**
+
+```
+ln -s ../storage/app/public public/storage
+```
+
+This command creates a symbolic link from public/storage to storage/app/public.
+
+After performing one of these actions, you should be able to access your storage files via the public/storage URL without encountering the "already linked" error. Make sure to clear your browser cache if you were previously experiencing issues.
