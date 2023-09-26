@@ -16,7 +16,6 @@ const siteMetadata = {
   facebook: "https://facebook.com",
   youtube: "https://youtube.com/codebucks",
   linkedin: "https://www.linkedin.com/in/ilearnbydoing/",
-  dribbble: "https://www.dribbble.com",
   locale: "en-US",
 };
 
