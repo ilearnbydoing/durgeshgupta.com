@@ -4,7 +4,7 @@ const siteMetadata = {
   author: "Durgesh Gupta",
   headerTitle: "Freelance Web Developer from Mumbai, India",
   description:
-    "Full-stack web developer, designer and marketer from Mumbai, India",
+    "Full-stack freelance web developer, designer and marketer from Mumbai, India",
   language: "en-us",
   theme: "system", // system, dark or light
   siteUrl: "https://durgeshgupta.com", // your website URL
