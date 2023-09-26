@@ -29,10 +29,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source:
-          "/unlocking-growth-your-go-to-digital-marketing-freelancer-in-india",
-        destination:
-          "/blog/unlocking-growth-your-go-to-digital-marketing-freelancer-in-india",
+        source: "/mastering-on-page-seo-your-ultimate-checklist",
+        destination: "/blog/mastering-on-page-seo-your-ultimate-checklist",
         permanent: true,
       },
       // Add more redirects as needed
