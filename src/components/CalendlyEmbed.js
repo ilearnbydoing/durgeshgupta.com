@@ -3,15 +3,13 @@ import React from "react";
 
 const CalendlyEmbed = ({ url }) => {
   return (
-    <div className="min-w-[520px] h-screen">
-      <iframe
-        src={url}
-        width="100%"
-        height="1000"
-        title="Calendly"
-        className="w-full h-full border-none"
-      />
-    </div>
+    <iframe
+      src={url}
+      width="100%"
+      height="100%"
+      title="Calendly"
+      className="w-full h-full border-none"
+    />
   );
 };
 

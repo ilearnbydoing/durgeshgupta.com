@@ -1,4 +1,3 @@
-import ContactForm from "@/src/components/Contact/ContactForm";
 import CalendlyEmbed from "@/src/components/CalendlyEmbed";
 import LottieAnimation from "@/src/components/Contact/LottieAnimation";
 import siteMetadata from "@/src/utils/siteMetaData";
@@ -20,9 +19,7 @@ export default function Contact() {
         </h2>
         <LottieAnimation />
       </div>
-      <div className="w-full  md:w-3/5 flex flex-col items-start justify-center px-5 xs:px-10 md:px-16 pb-8">
-        {/* <ContactForm /> */}
-
+      <div className="w-full h-screen flex items-center md:w-3/5 flex flex-col items-start px-5 xs:px-10 md:px-16 pb-8">
         <CalendlyEmbed url="https://calendly.com/ilearnbydoing/15min" />
       </div>
     </section>
