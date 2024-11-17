@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { DribbbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "../Icons";
 import Link from "next/link";
 import siteMetadata from "@/src/utils/siteMetaData";
-import Whatsapp from "../Whatsapp";
+//import Whatsapp from "../Whatsapp";
 const Footer = () => {
   const {
     register,
@@ -92,7 +92,6 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <Whatsapp />
     </footer>
   );
 };
