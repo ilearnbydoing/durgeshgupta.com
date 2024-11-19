@@ -109,7 +109,7 @@ const Header = () => {
           About
         </Link>
         <Link href="/contact" className="mx-2">
-          Contact
+          Book a Call
         </Link>
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
