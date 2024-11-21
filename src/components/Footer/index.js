@@ -5,6 +5,7 @@ import { DribbbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "../Icons";
 import Link from "next/link";
 import siteMetadata from "@/src/utils/siteMetaData";
 //import Whatsapp from "../Whatsapp";
+import ChatwootLoader from '../ChatwootLoader';
 const Footer = () => {
   const {
     register,
@@ -92,6 +93,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      <ChatwootLoader />
     </footer>
   );
 };
