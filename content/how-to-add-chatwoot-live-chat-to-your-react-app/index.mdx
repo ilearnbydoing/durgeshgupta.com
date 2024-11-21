@@ -1,0 +1,128 @@
+---
+title: "Add Chatwoot Live Chat to React App | Step-by-Step Guide"
+description: "Integrate Chatwoot live chat into your React app to boost engagement, provide real-time support, and increase conversions. Book a free consultation today!"
+publishedAt: "2024-11-20"
+updatedAt: "2024-11-20"
+author: "Durgesh Gupta"
+isPublished: true
+tags:
+  - react
+  - nextjs
+image: "../../public/blogs/how-to-add-chatwoot-live-chat-to-your-react-app.png"
+---
+
+In today’s fast-paced digital world, ensuring seamless communication with your customers can make or break your business. **Live chat solutions** like [Chatwoot](https://www.chatwoot.com/) have become a go-to option for integrating customer support into websites and applications.
+
+In this article, we’ll walk you through implementing Chatwoot in a **React.js** application. By the end, you’ll have a functional live chat feature ready to assist and convert visitors in real time.
+
+----------
+
+### Why Chatwoot?
+
+Chatwoot is a modern and open-source customer engagement platform that allows you to:
+
+-   Connect with customers through live chat.
+-   Support multiple communication channels like WhatsApp, Facebook, and Email.
+-   Monitor team performance with analytics and insights.
+
+### Let’s Get Started
+
+Follow these simple steps to integrate Chatwoot in your React application.
+
+----------
+
+#### 1. Create a Chatwoot Component
+
+In React, we’ll dynamically load Chatwoot's JavaScript SDK. Below is the React component you need:
+
+```javascript
+import React, { useEffect } from 'react';
+
+const ChatwootLoader = () => {
+  useEffect(() => {
+    const loadChatwoot = () => {
+      const BASE_URL = "https://app.chatwoot.com";
+      const script = document.createElement('script');
+      script.src = `${BASE_URL}/packs/js/sdk.js`;
+      script.defer = true;
+      script.async = true;
+
+      script.onload = () => {
+        if (window.chatwootSDK) {
+          window.chatwootSDK.run({
+            websiteToken: 'uVksWgN32vS8s4kx5tdGLvjZ',
+            baseUrl: BASE_URL,
+          });
+        }
+      };
+
+      document.body.appendChild(script);
+    };
+
+    loadChatwoot();
+
+    // Clean up script when the component unmounts
+    return () => {
+      const existingScript = document.querySelector(`script[src="https://app.chatwoot.com/packs/js/sdk.js"]`);
+      if (existingScript) {
+        document.body.removeChild(existingScript);
+      }
+    };
+  }, []);
+
+  return null;
+};
+
+export default ChatwootLoader;
+
+```
+
+----------
+
+#### 2. Use the Component in Your App
+
+Once you have the `ChatwootLoader` component ready, include it in your application like this:
+
+```javascript
+import React from 'react';
+import ChatwootLoader from './ChatwootLoader';
+
+const App = () => {
+  return (
+    <div>
+      <h1>Welcome to My App</h1>
+      <ChatwootLoader />
+    </div>
+  );
+};
+
+export default App;
+
+```
+
+----------
+
+### Why Is Live Chat Important for Your Business?
+
+1.  **Real-time Customer Support**  
+    Engage your customers when they need help the most. Live chat reduces response time and increases satisfaction.
+    
+2.  **Boost Conversions**  
+    Customers are more likely to make a purchase when their doubts are resolved instantly.
+    
+3.  **Collect Feedback**  
+    A live chat feature helps gather insights into customer behavior and expectations.
+    
+4.  **Competitive Edge**  
+    Offering a superior support experience sets your business apart in competitive markets.
+    
+
+----------
+
+### Ready to Supercharge Your Customer Engagement?
+
+Adding Chatwoot to your application is a great step forward, but optimizing your entire digital experience is even better. As a seasoned **independent consultant**, I can help you implement advanced solutions, customize them for your business needs, and guide you to scale your customer engagement effectively.
+
+Let’s build something amazing together.
+
+**[Book a Free Consultation Today!](https://durgeshgupta.com/contact)**
